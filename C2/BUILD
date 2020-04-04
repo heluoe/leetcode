@@ -37,3 +37,8 @@ cc_binary(
     name = "TreeToDoubleList",
     srcs = ["TreeToDoubleList.cpp"],
 )
+
+cc_binary(
+    name = "MergeIntervals",
+    srcs = ["MergeIntervals.cpp"],
+)
