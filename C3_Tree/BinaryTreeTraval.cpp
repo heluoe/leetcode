@@ -112,16 +112,16 @@ public:
             return ret;
 
         std::stack<TreeNode *> bufStack;
-        TreeNode *cur = root;
+        TreeNode *cur = root, *pre_process = root;
         bufStack.push(cur);
         while (!bufStack.empty())
         {
             cur = bufStack.top();
-            if (cur->left && root != cur->left && root != cur->right)
+            if (cur->left && pre_process != cur->left && pre_process != cur->right)
             {
                 bufStack.push(cur->left);
             }
-            else if (cur->right && root != cur->right)
+            else if (cur->right && pre_process != cur->right)
             {
                 bufStack.push(cur->right);
             }
@@ -129,7 +129,7 @@ public:
             {
                 ret.push_back(cur->val);
                 bufStack.pop();
-                root = cur;
+                pre_process = cur;
             }
         }
 
