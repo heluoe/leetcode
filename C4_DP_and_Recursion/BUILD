@@ -8,8 +8,12 @@ cc_binary(
     srcs = ["MinPathSum.cpp"],
 )
 
-
 cc_binary(
     name = "Walk",
     srcs = ["Walk.cpp"],
+)
+
+cc_binary(
+    name = "CoinChange",
+    srcs = ["CoinChange.cpp"],
 )
