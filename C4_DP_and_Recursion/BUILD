@@ -17,3 +17,8 @@ cc_binary(
     name = "CoinChange",
     srcs = ["CoinChange.cpp"],
 )
+
+cc_binary(
+    name = "Change",
+    srcs = ["Change.cpp"],
+)
