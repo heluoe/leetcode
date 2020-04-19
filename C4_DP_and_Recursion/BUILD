@@ -22,3 +22,8 @@ cc_binary(
     name = "Change",
     srcs = ["Change.cpp"],
 )
+
+cc_binary(
+    name = "BalloonMaxCoins",
+    srcs = ["BalloonMaxCoins.cpp"],
+)
