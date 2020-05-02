@@ -27,3 +27,8 @@ cc_binary(
     name = "BalloonMaxCoins",
     srcs = ["BalloonMaxCoins.cpp"],
 )
+
+cc_binary(
+    name = "maxEnvelopes",
+    srcs = ["MaxEnvelopes.cpp"],
+)
