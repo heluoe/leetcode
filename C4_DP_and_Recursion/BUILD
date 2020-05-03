@@ -32,3 +32,8 @@ cc_binary(
     name = "maxEnvelopes",
     srcs = ["MaxEnvelopes.cpp"],
 )
+
+cc_binary(
+    name = "CalculateMinimumHP",
+    srcs = ["CalculateMinimumHP.cpp"],
+)
