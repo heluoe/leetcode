@@ -21,10 +21,10 @@ public:
         {
             dp_t[i][i] = s[i] == '1' ? 1 : 0;
             dp_f[i][i] = s[i] == '1' ? 0 : 1;
-            // left part
+            // left part [j][k]
             for (int j = i - 2; j >= 0; j -= 2)
             {
-                // right part
+                // right part [k+2][i]
                 for (int k = j; k < i; k += 2)
                 {
                     if (s[k + 1] == '&')
@@ -37,7 +37,7 @@ public:
                         dp_t[j][i] += (dp_f[j][k] + dp_t[j][k]) * dp_t[k + 2][i] + dp_t[j][k] * dp_f[k + 2][i];
                         dp_f[j][i] += dp_f[j][k] * dp_f[k + 2][i];
                     }
-                    else
+                    else // '^'
                     {
                         dp_t[j][i] += dp_f[j][k] * dp_t[k + 2][i] + dp_t[j][k] * dp_f[k + 2][i];
                         dp_f[j][i] += dp_f[j][k] * dp_f[k + 2][i] + dp_t[j][k] * dp_t[k + 2][i];
