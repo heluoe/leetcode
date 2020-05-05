@@ -5,7 +5,13 @@
 #include <vector>
 
 using namespace std;
+/*
+ * @lc app=leetcode.cn id=08.14 lang=cpp
+ *
+ * [08.14] boolean-evaluation-lcci
+ */
 
+// @lc code=start
 class Solution
 {
 public:
@@ -49,3 +55,4 @@ public:
         return result == 0 ? dp_f[0][s.length() - 1] : dp_t[0][s.length() - 1];
     }
 };
+// @lc code=end
