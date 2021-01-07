@@ -20,7 +20,7 @@ public:
         if (nums.empty() || nums.size() == 1)
             return 0;
 
-        int dp[2] = {0, 0};
+        int dp[2] = {0, 0}; // {current jump, next jump}
         int jump = 0;
         for (int i = 0; i < nums.size(); ++i)
         {
